@@ -1,4 +1,4 @@
-package web.model;
+package model;
 
 import org.springframework.stereotype.Component;
 
@@ -21,7 +21,7 @@ public class Car {
     public String toString() {
         return "Car{" +
                "id=" + id +
-               ", web.model='" + model + '\'' +
+               ", model='" + model + '\'' +
                ", series=" + series +
                '}';
     }
