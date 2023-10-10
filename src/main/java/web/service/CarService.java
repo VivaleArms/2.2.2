@@ -7,7 +7,7 @@ import java.util.List;
 @Component()
 public interface CarService {
 
-   public List<Car> printCarList(List<Car> carList, int number);
+   public List<Car> printCarList(int number);
 
 
 }

@@ -18,25 +18,14 @@ public class CarController {
 
     private final CarService carService;
 
-    private List<Car> carList;
-
     @Autowired
     public CarController(CarService carService) {
         this.carService = carService;
     }
 
-    {
-        System.out.println("List is exist");
-        carList = new ArrayList<>();
-        carList.add(new Car(1, "car1", 11));
-        carList.add(new Car(2, "car2", 22));
-        carList.add(new Car(3, "car3", 33));
-        carList.add(new Car(4, "car4", 44));
-        carList.add(new Car(5, "car5", 55));
-    }
     @GetMapping()
     public String printCarList(@RequestParam(value = "count", defaultValue = "5") int cars, Model model) {
-        List<Car> list = carService.printCarList(carList,cars);
+        List<Car> list = carService.printCarList(cars);
         model.addAttribute("carList", list);
         return "cars";
     }
